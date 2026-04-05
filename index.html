@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <title>Dr. Z Zombies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>Dr. Z Zombies</header>
+
+<nav>
+  <a href="#" onclick="showSection('home')">Home</a>
+  <a href="#" onclick="showSection('sobre')">Sobre</a>
+  <a href="#" onclick="showSection('jogar')">Jogar</a>
+  <a href="#" onclick="showSection('contato')">Contato</a>
+</nav>
+
+<div class="container">
+
+  <div id="home" class="section active">
+    <h2>Home</h2>
+    <p>Bem-vindo ao Dr. Z Zombies! Sobreviva ao apocalipse e enfrente hordas de zumbis até derrotar o terrível Dr. Z.</p>
+  </div>
+
+  <div id="sobre" class="section">
+    <h2>Sobre o Jogo</h2>
+    <p>Dr. Z Zombies é um jogo 2D em pixel art onde você avança por um mundo pós-apocalíptico derrotando zumbis. O objetivo é chegar até o cientista Dr. Z e acabar com a infecção.</p>
+  </div>
+
+  <div id="jogar" class="section">
+    <h2>Jogar</h2>
+    <p>O jogo ainda está em desenvolvimento.</p>
+    <button onclick="alert('Em breve!')">Iniciar Jogo</button>
+  </div>
+
+  <div id="contato" class="section">
+    <h2>Contato</h2>
+    <p>Email: contato@drzzombies.com</p>
+  </div>
+
+</div>
+
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
